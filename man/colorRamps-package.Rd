@@ -6,14 +6,26 @@
 Builds color maps
 }
 \description{
-Provided functions use simple piecewise linear functions to build color maps
+This is a rewrite of the \code{colorRamps} package. It now contains two
+function \code{\link{table.ramp}} and \code{\link{rgb.tables}} that
+allow easy construction of color palettes. This version contains two new
+palettes similar to the Matlab default palette (\code{\link{matlab.like}}
+and \code{\link{matlab.like2}}).
+
+I built colorRamps because I needed to use a particular palette and got
+tired of sourcing in my code into every session. Now I can install and
+forget. Despite using R for years, I had not noticed the alternative
+\code{\link{colorRamp}} which may suit your needs. If you want really
+attractive palettes, get the RColorBrewer package from CRAN. For certain
+applications the RColorBrewer palettes do not work for me, hence this
+package.
 }
 \details{
 \tabular{ll}{
 Package: \tab colorRamps\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2007-04-05\cr
+Version: \tab 2.0\cr
+Date: \tab 2007-09-09\cr
 License: \tab GPL\cr
 }
 All function take a single argument \code{n} that specifies the number
@@ -26,5 +38,5 @@ Maintainer: Tim Keitt <tkeitt@gmail.com>
 }
 \keyword{ package }
 \examples{
-image(matrix(1:400, 20), col = blue2red(400))
+image(matrix(1:400, 20), col = matlab.like2(400))
 }
