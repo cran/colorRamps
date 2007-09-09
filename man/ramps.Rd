@@ -18,6 +18,7 @@ ygobb(n)
   A colormap
 }
 \author{Tim Keitt <tkeitt@gmail.com>}
+\references{Keitt, T. H. (2008) Coherent ecological dynamics induced by large scale disturbance. \emph{Nature} 454:331-334}
 \seealso{\code{\link{rgb}}}
 \examples{
 image(matrix(1:400, 20), col = ygobb(400))

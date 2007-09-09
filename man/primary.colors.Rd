@@ -19,6 +19,7 @@ The standard R palette only provides 8 colors after which colors are recycled. I
 An R color palette
 }
 \author{Timothy H. Keitt}
+\references{Keitt, T. H. (2008) Coherent ecological dynamics induced by large scale disturbance. \emph{Nature} 454:331-334}
 \examples{
 x <- matrix(rnorm(100), 10)
 x <- sapply(1:10, function(i, x) cumsum(x[,i]), x=x)

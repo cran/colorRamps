@@ -35,6 +35,7 @@ Tim Keitt
 
 Maintainer: Tim Keitt <tkeitt@gmail.com>
 }
+\references{Keitt, T. H. (2008) Coherent ecological dynamics induced by large scale disturbance. \emph{Nature} 454:331-334}
 \keyword{ package }
 \examples{
 filled.contour(volcano, col = ygobb(21), asp = 1)

@@ -20,6 +20,7 @@ blue2green2red(n)
   a color palette
 }
 \author{ Timothy H. Keitt }
+\references{Keitt, T. H. (2008) Coherent ecological dynamics induced by large scale disturbance. \emph{Nature} 454:331-334}
 \examples{
 image(matrix(1:400, 20), col = blue2yellow(400))
 }

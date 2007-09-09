@@ -14,7 +14,7 @@ primary.colors <- function(n, steps = 3, no.white = TRUE)
       res[round(seq(1, length(res), length.out = n))]
   }
 
-table.ramp <- function(n, mid = 0.5, sill = 0.5, base = 1)
+table.ramp <- function(n, mid = 0.5, sill = 0.5, base = 1, height = 1)
   {
     x <- seq(0, 1, length.out = n)
     y <- rep(0, length(x))
@@ -31,7 +31,7 @@ table.ramp <- function(n, mid = 0.5, sill = 0.5, base = 1)
     yi <- seq(1, 0, length.out = length(xi))
     i <- which(xi > 0 & xi <= n)
     y[xi[i]] <- yi[i]
-    y
+    height * y
   }
 
 rgb.tables <- function(n,
@@ -65,11 +65,11 @@ green2red <- function(n)
   rgb.tables(n,
              red = c(1, 0, 2),
              green = c(0, 0, 2),
-             blue = c(0, 0, 0))
+             blue = c(0, 0, 0, 0))
 
 blue2green <- function(n)
   rgb.tables(n,
-             red = c(0, 0, 0),
+             red = c(0, 0, 0, 0),
              green = c(1, 0, 2),
              blue = c(0, 0, 2))
 
