@@ -1,7 +1,12 @@
 primary.colors <- function(n, steps = 3, no.white = TRUE)
   {
     i <- round(seq(0, 255, length.out = steps))
-    res <- rgb(expand.grid(i, i, i), maxColorValue = 255)
+    if(is.R()) {
+        res <- rgb(expand.grid(i, i, i), maxColorValue = 255)
+    } else {
+        cmat <- expand.grid(i, i, i)
+        res <- rgb(cmat[,1], cmat[,2], cmat[,3], maxColorValue = 255)
+    }
     if ( no.white ) res <- res[-length(res)]
     if ( missing(n) )
       res
@@ -85,4 +90,14 @@ cyan2yellow <- function(n)
              red = c(1, 0, 2),
              green = c(0.5, 1, 2),
              blue = c(0, 0, 2))
+
+ygobb <- function(n)
+{
+        rg <- approx(c(0, 0.25, 0.5, 0.75, 1),
+                     c(1, 2/3, 2/3, 1/3, 0), n = n)$y
+        b <- approx(c(0, 0.25, 0.5, 0.75, 1),
+                    c(2/3, 2/3, 1/3, 2/3, 0), n = n)$y
+        rgb(rg, rg, b)
+}
+
 

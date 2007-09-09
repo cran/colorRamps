@@ -6,7 +6,7 @@
 Builds color maps
 }
 \description{
-This is a rewrite of the \code{colorRamps} package. It now contains two
+This (v2) is a rewrite of the \code{colorRamps} package. It now contains two
 function \code{\link{table.ramp}} and \code{\link{rgb.tables}} that
 allow easy construction of color palettes. This version contains two new
 palettes similar to the Matlab default palette (\code{\link{matlab.like}}
@@ -37,5 +37,5 @@ Maintainer: Tim Keitt <tkeitt@gmail.com>
 }
 \keyword{ package }
 \examples{
-image(matrix(1:400, 20), col = matlab.like2(400))
+filled.contour(volcano, col = ygobb(21), asp = 1)
 }
