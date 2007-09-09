@@ -28,8 +28,7 @@ Version: \tab 2.0\cr
 Date: \tab 2007-09-09\cr
 License: \tab GPL\cr
 }
-All function take a single argument \code{n} that specifies the number
-of colors to generate.
+Most functions take a single argument \code{n} that specifies the number of colors to generate.
 }
 \author{
 Tim Keitt

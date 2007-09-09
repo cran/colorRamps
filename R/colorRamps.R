@@ -1,3 +1,14 @@
+primary.colors <- function(n, steps = 3, no.white = TRUE)
+  {
+    i <- round(seq(0, 255, length.out = steps))
+    res <- rgb(expand.grid(i, i, i), maxColorValue = 255)
+    if ( no.white ) res <- res[-length(res)]
+    if ( missing(n) )
+      res
+    else
+      res[round(seq(1, length(res), length.out = n))]
+  }
+
 table.ramp <- function(n, mid = 0.5, sill = 0.5, base = 1)
   {
     x <- seq(0, 1, length.out = n)
