@@ -1,12 +1,7 @@
 primary.colors <- function(n, steps = 3, no.white = TRUE)
   {
     i <- round(seq(0, 255, length.out = steps))
-    if(is.R()) {
-        res <- rgb(expand.grid(i, i, i), maxColorValue = 255)
-    } else {
-        cmat <- expand.grid(i, i, i)
-        res <- rgb(cmat[,1], cmat[,2], cmat[,3], maxColorValue = 255)
-    }
+    res <- rgb(expand.grid(i, i, i), maxColorValue = 255)
     if ( no.white ) res <- res[-length(res)]
     if ( missing(n) )
       res
